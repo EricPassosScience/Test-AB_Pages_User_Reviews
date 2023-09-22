@@ -40,6 +40,7 @@ Para lidar com essa dinâmica, utilizamos a métrica de elevação, também conh
 ************************
 Essa abordagem nos permite compreender de forma mais precisa como a versão B está performando em relação à versão A, levando em consideração o contexto da linha de base. Assim, podemos determinar se o aumento nas métricas cumulativas é estável ao longo do tempo, o que chamamos de "métricas de elevação" (Lift). A métrica de elevação nos ajuda a avaliar se a versão B está realmente gerando impacto positivo em comparação com a versão A, ajustando para as variações naturais que ocorrem com o tempo.
 
+# Análise de Potência
 
 
 
