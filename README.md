@@ -41,6 +41,35 @@ Para lidar com essa dinâmica, utilizamos a métrica de elevação, também conh
 Essa abordagem nos permite compreender de forma mais precisa como a versão B está performando em relação à versão A, levando em consideração o contexto da linha de base. Assim, podemos determinar se o aumento nas métricas cumulativas é estável ao longo do tempo, o que chamamos de "métricas de elevação" (Lift). A métrica de elevação nos ajuda a avaliar se a versão B está realmente gerando impacto positivo em comparação com a versão A, ajustando para as variações naturais que ocorrem com o tempo.
 
 # Análise de Potência
+Antes de iniciar um teste, é fundamental abordar duas questões essenciais:
+- Qual a proporção de usuários que deve participar do teste e quantos devem permanecer no grupo de controle?
+- Por quanto tempo o teste deve ser conduzido?
+
+A abordagem estatística para responder a essas perguntas envolve a análise de potência. Para começar, é necessário determinar qual é a menor diferença (ou aumento) que teria relevância para o negócio, conhecida como "tamanho do efeito". Em segundo lugar, é preciso entender o nível de variação normalmente observado na métrica de resultado. A análise de potência realiza cálculos para determinar o tamanho da amostra necessário, ou seja, o número de usuários que deve ser incluído no teste, a fim de identificar o tamanho do efeito com significância estatística.
+
+A análise de potência considera dois componentes importantes para determinar o tamanho da amostra:
+- Divisão: A proporção de usuários alocados para o grupo de teste em comparação com o grupo de controle. Essa divisão afeta diretamente o tamanho da amostra. Quanto mais desequilibrada for essa divisão (ou seja, quanto mais distante de uma divisão 50-50), mais longo deverá ser o teste.
+- Duração do teste: O período total que será necessário para expor a quantidade planejada de usuários ao teste. Como os usuários podem ser expostos novamente ao longo do tempo, o aumento cumulativo da exposição acontece de forma mais lenta. Matematicamente, quanto mais desequilibrada for a divisão e quanto menor for o tamanho do efeito, mais longa deverá ser a duração do teste.
+
+A fórmula matemática para calcular a potência estatística em um cenário como esse é geralmente expressa como:
+
+<p align="center">
+  <img width="200" height="40" src="https://github.com/EricPassosScience/Monte_Carlo_Simulation-Time_Series/assets/97414922/8dd493fd-5a42-4075-9937-2b999fc98247">
+</p>
+
+onde P é a potência estatística  que representa a probabilidade de detectar um efeito significativo se ele existir. β é a taxa de erro do tipo II, que indica a probabilidade de não detectar um efeito significativo quando ele realmente existe. A análise de potência desempenha um papel crucial na determinação de como conduzir testes de forma eficiente, otimizando a alocação de usuários e o tempo necessário para obter resultados confiáveis.
+
+É importante destacar que, em muitas situações, a análise de potência não conta toda a história. Um exemplo disso é observado em portais online que seguem um ciclo semanal distintamente marcado, com padrões de comportamento de compra variando consideravelmente nos fins de semana e nos dias úteis. Nesse contexto, é altamente recomendável realizar testes A/B com uma duração mínima de uma semana e, de preferência, em múltiplos de sete dias. Naturalmente, se os resultados parecerem significativamente negativos logo nos primeiros um ou dois dias, é sensato encerrar o teste mais cedo.
+
+Além disso, a escolha do equilíbrio na divisão entre os grupos de teste e controle não apenas afeta a duração do teste, mas também está relacionada ao nível de risco envolvido. Por exemplo, quando uma ampla variedade de produtos está à venda, podemos começar com uma divisão de 90% para o controle e 10% para o teste. Em contraste, quando desejamos garantir que um recurso crítico no site mantenha seu desempenho, podemos optar por uma divisão de 5% para o controle e 95% para o teste. Entretanto, em testes de baixo risco, como pequenas alterações na interface do site, uma divisão equilibrada de 50% para o controle e 50% para o teste pode resultar em uma duração de teste mais curta.
+
+A seleção cuidadosa do equilíbrio entre teste e controle, juntamente com a consideração do contexto sazonal e do comportamento dos usuários, desempenha um papel crucial na execução eficaz de testes A/B, permitindo que as empresas tomem decisões informadas com base em dados confiáveis.
+
+
+
+
+
+
 
 
 
