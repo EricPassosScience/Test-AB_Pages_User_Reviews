@@ -22,6 +22,26 @@ Dessa forma, coletamos dados analíticos das duas versões, a de controle e a va
 Esta é apenas a ponta do iceberg! Os Testes A/B podem ser aplicados em diversas plataformas de marketing, como nas redes sociais, marketing visual e muito mais.
 
 Frisa-se que o meu objetivo aqui não é criar o Teste A/B, mas sim analisar os resultados de um Teste A/B.
+*******************************
+
+# Análise de Testes A/B
+********************************
+
+## Elevação (Lift)
+
+Na análise de Teste A/B, normalmente, avaliamos a diferença entre a versão A e a versão B. Para uma métrica de resultado específica, essa diferença é calculada como xB (versão B) menos xA (versão A). É importante notar que essa diferença, principalmente quando se trata de resultados cumulativos, pode aumentar com o passar do tempo. Tomemos como exemplo o gasto por usuário em um teste. À medida que o teste prossegue, ambos os grupos continuam a fazer compras, acumulando gastos ao longo do tempo. O sucesso da versão B é determinado pelo aumento mais rápido dos gastos no grupo de teste em comparação com o grupo de controle.
+
+Para lidar com essa dinâmica, utilizamos a métrica de elevação, também conhecida como "Lift," que dimensiona a diferença entre os grupos pelo valor de referência, ou seja, o valor da versão A. Para calcular a elevação em relação a uma métrica de resultado x, usamos a fórmula: 
+***********************
+<p align="center">
+  <img width="450" height="150" src="https://github.com/EricPassosScience/Monte_Carlo_Simulation-Time_Series/assets/97414922/91338f64-0e8c-4f66-b1f5-bbdf8493c2b9">
+</p>
+
+************************
+Essa abordagem nos permite compreender de forma mais precisa como a versão B está performando em relação à versão A, levando em consideração o contexto da linha de base. Assim, podemos determinar se o aumento nas métricas cumulativas é estável ao longo do tempo, o que chamamos de "métricas de elevação" (Lift). A métrica de elevação nos ajuda a avaliar se a versão B está realmente gerando impacto positivo em comparação com a versão A, ajustando para as variações naturais que ocorrem com o tempo.
+
+
+
 
 
 
