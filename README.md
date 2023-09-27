@@ -65,7 +65,12 @@ Além disso, a escolha do equilíbrio na divisão entre os grupos de teste e con
 
 A seleção cuidadosa do equilíbrio entre teste e controle, juntamente com a consideração do contexto sazonal e do comportamento dos usuários, desempenha um papel crucial na execução eficaz de testes A/B, permitindo que as empresas tomem decisões informadas com base em dados confiáveis.
 
-
+# Em resumo, como analisar testes A/B? 
+- 1. Configuramos o experimento
+- 2. Executamos o teste de hipótese e registramos a taxa de sucesso de cada grupo.
+- 3. Criamos um gráfico de distribuição da diferença entre as duas amostras
+- 4. Calculamos o poder estatístico
+- 5. Avaliamos como o tamanho da amosta afeta o teste. 
 
 
 
