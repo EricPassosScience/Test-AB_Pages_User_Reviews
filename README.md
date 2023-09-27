@@ -72,11 +72,21 @@ A seleção cuidadosa do equilíbrio entre teste e controle, juntamente com a co
 - 4. Calculamos o poder estatístico
 - 5. Avaliamos como o tamanho da amosta afeta o teste. 
 
+# Fonte de Dados
+Usaremos dados fictícios, mas que representam os dados de um cenário real. Abaixo, podemos visualizar um exemplo:
 
+| id | variante | compra | data |
+|---|---|---|---|
+| 0x6f9421 | A | False | 2019-12-26 |
+| 0x6f9421 | A | True | 2019-04-15 |
+| 0x6f9421 | B | False | 2019-06-29 |
+| 0x6f9421 | A | False | 2019-04-10 |
+| 0x6f9421 | B | True | 2019-11-02 |
 
+A coluna "variante" representa se a página que foi acessada possui ou não comentários e avaliações.
+- A: representa a página que mostra o número atual de comentários e avaliações de usuários;
+- B : representa a página que não mostra os comentários de usuários no site.
 
+A coluna "id" indica qual foi o usuário que acessou a página. A variável "compra" informa se aquele usuário realizou ou não uma compra (True ou False), enquanto que a coluna "data" registra a data de acesso ou da trasação em uma das páginas. 
 
-
-
-
-
+Obs. Poderiamos ter outras informaçõe como: valor gasto, horário da transação ou do acesso, etc. 
