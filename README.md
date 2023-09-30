@@ -90,3 +90,29 @@ A coluna "variante" representa se a página que foi acessada possui ou não come
 A coluna "id" indica qual foi o usuário que acessou a página. A variável "compra" informa se aquele usuário realizou ou não uma compra (True ou False), enquanto que a coluna "data" registra a data de acesso ou da trasação em uma das páginas. 
 
 Obs. Poderiamos ter outras informaçõe como: valor gasto, horário da transação ou do acesso, etc. 
+
+## Fase 1 - Configurando o Experimento
+Com base nos registros de data e hora associados a cada evento, é possível realizar um teste de hipótese continuamente à medida que cada evento é observado. No entanto, surge a questão crucial: quando devemos interromper esse processo? Deve ser quando uma variante é considerada significativamente superior à outra ou é necessário que essa superioridade seja consistentemente mantida por um determinado período de tempo? E quanto tempo devemos esperar antes de concluir que nenhuma das variantes é superior à outra? Todas essas decisões precisam ser feitas considerando o contexto específico do negócio em questão. Geralmente, essas são as partes mais desafiadoras dos Testes A/B e da análise em geral.
+
+Se determinarmos que a variante "A" é superior, a menos que a nova variante "B" prove ser definitivamente melhor com uma taxa de erro Tipo I de 5%, nossas hipóteses nula e alternativa devem ser formuladas da seguinte maneira:
+- h0: Pb - Pa = 0
+- H1: Pb - Pa > 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
