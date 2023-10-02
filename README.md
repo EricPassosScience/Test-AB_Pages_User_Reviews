@@ -98,10 +98,21 @@ Se determinarmos que a variante "A" é superior, a menos que a nova variante "B"
 - h0: Pb - Pa = 0
 - H1: Pb - Pa > 0
 
+H0: diz que a diferença de probabilidade dos dois grupos é igual a zero
+
+H1: diz que a diferença d e probabilidade dos dois grupos é maior que zero
 
 
+## Pré-Processamento dos Dados
+Todo o passo a passo está dentro do script. Mas deixarei qui algumas considerações:
+- Por conta da plotagem dos gráficos requerer bastante muita capacidade de processamento, vamos utilizar somente dados referentes a dois meses
+- Vamos criar um baseline (linha base) da taxa de conversão antes de executar o teste de hipótese. Assim, saberemos a taxa de conversão base e ou aumento desejado em compras que gostariámos de testar
+- Para o nosso exemplo, queremos confirmar que as alterações que fazemos na página retirando as avaliações de usuários resultarão em pelo menos um aumento de 2% em nossa taxa de inscrição (essa definição deve ser alinhada com a área de negócio)
+- Lembremos, A será o grupo de controle e B será o grupo de teste
 
 
+Continua...
+  
 
 
 
