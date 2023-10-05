@@ -92,27 +92,26 @@ La columna "id" indica qué usuario ha visitado la página. La variable "compra"
 
 Nota: Podríamos tener otras informaciones como: valor gastado, horario de la transacción o del acceso, etc.
 
-## Configurando o Experimento
-Com base nos registros de data e hora associados a cada evento, é possível realizar um teste de hipótese continuamente à medida que cada evento é observado. No entanto, surge a questão crucial: quando devemos interromper esse processo? Deve ser quando uma variante é considerada significativamente superior à outra ou é necessário que essa superioridade seja consistentemente mantida por um determinado período de tempo? E quanto tempo devemos esperar antes de concluir que nenhuma das variantes é superior à outra? Todas essas decisões precisam ser feitas considerando o contexto específico do negócio em questão. Geralmente, essas são as partes mais desafiadoras dos Testes A/B e da análise em geral.
+## Configurando el experimento
+Según las marcas de tiempo asociadas con cada evento, puede realizar una prueba de hipótesis continuamente a medida que se observa cada evento. Sin embargo, surge la pregunta crucial: ¿cuándo deberíamos detener este proceso? ¿Debería serlo cuando una variante se considera significativamente superior a la otra, o es necesario que esta superioridad se mantenga consistentemente durante un cierto período de tiempo? ¿Y cuánto tiempo deberíamos esperar antes de concluir que ninguna variante es superior a la otra? Todas estas decisiones deben tomarse considerando el contexto específico del negocio en cuestión. Estas suelen ser las partes más desafiantes de las pruebas A/B y del análisis en general.
 
-Se determinarmos que a variante "A" é superior, a menos que a nova variante "B" prove ser definitivamente melhor com uma taxa de erro Tipo I de 5%, nossas hipóteses nula e alternativa devem ser formuladas da seguinte maneira:
+Si determinamos que la variante "A" es superior, a menos que la nueva variante "B" demuestre ser definitivamente mejor con una tasa de error Tipo I del 5%, nuestras hipótesis nula y alternativa deberían formularse de la siguiente manera:
 - h0: Pb - Pa = 0
 - H1: Pb - Pa > 0
 
-H0: diz que a diferença de probabilidade dos dois grupos é igual a zero
+H0: dice que la diferencia de probabilidad de los dos grupos es igual a cero
 
-H1: diz que a diferença d e probabilidade dos dois grupos é maior que zero
+H1: dice que la diferencia de probabilidad de los dos grupos es mayor que cero
 
-## Pré-Processamento e alguns comentários
-Todo o passo a passo está dentro do script. Mas deixarei qui algumas considerações:
-- Por conta da plotagem dos gráficos requerer bastante muita capacidade de processamento, vamos utilizar somente dados referentes a dois meses
-- Vamos criar um baseline (linha base) da taxa de conversão antes de executar o teste de hipótese. Assim, saberemos a taxa de conversão base e ou aumento desejado em compras que gostariámos de testar
-- Para o nosso exemplo, queremos confirmar que as alterações que fazemos na página retirando as avaliações de usuários resultarão em pelo menos um aumento de 2% em nossa taxa de inscrição (essa definição deve ser alinhada com a área de negócio)
-- Trabalharemos com o Efeito Mínimo Detectável (Minimum Detectable Effect)
-- Lembremos, A será o grupo de controle e B será o grupo de teste
+## Preprocesamiento y algunos comentarios.
+Todo el paso a paso está dentro del script. Pero te dejo con algunas consideraciones:
+- Debido a que trazar los gráficos requiere mucha capacidad de procesamiento, solo usaremos datos durante dos meses.
+- Creemos una línea de base de la tasa de conversión antes de ejecutar la prueba de hipótesis. De esta manera sabremos la tasa de conversión base y/o aumento deseado de compras que nos gustaría probar.
+- Para nuestro ejemplo, queremos confirmar que los cambios que hacemos en la página eliminando las reseñas de los usuarios resultarán en al menos un aumento del 2% en nuestra tasa de suscripción (esta definición debe estar alineada con el área de negocio)
+- Trabajaremos con el Efecto Mínimo Detectable (Minimum Detectable Effect)
+- Recuerde, A será el grupo de control y B será el grupo de prueba
 
-
-
+Continuará...
 
 
 
