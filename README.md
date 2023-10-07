@@ -144,7 +144,7 @@ Por tanto, podemos representar ambos grupos como una distribución normal con la
 
 Lo mismo se puede hacer para el grupo de prueba. Por tanto, tendremos dos distribuciones normales para p_A y p_B. Y con distribuciones normales, nuestro trabajo de comparación será más sencillo.Obs: p_A y p_B están definidos en Python scrypt.
 
-# Variância da Soma
+# Variación de Suma
 Otro punto importante para comprender lo que se hace en Python scrypt es la variación de la suma.
 Una propiedad básica de la varianza es que la varianza de la suma de dos variables aleatorias independientes es la suma de las varianzas. Algo obvio, pero hay que decir lo obvio: 
 - $Var(X+Y) = Var(X) + Var(Y)$
