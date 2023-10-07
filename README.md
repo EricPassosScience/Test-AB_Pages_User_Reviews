@@ -132,9 +132,20 @@ $E(X) = p$ y $Var(X) = p(1 - p)$.
 
 Según el teorema del límite central, al calcular varias medias muestrales, podemos aproximarnos a la media verdadera μ de la población, de la cual se obtuvieron los datos para el grupo de control. La distribución de las medias muestrales se distribuirá normalmente alrededor de la media verdadera, con una desviación estándar igual al error estándar de la media. La ecuación para esto viene dada como:
 
-
 <p align="center">
   <img width="250" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/254fca72-e950-4de1-a852-9c3e8a8c08da/imagem_2023-10-07_002250176.png">
 </p>
+
+Por tanto, podemos representar ambos grupos como una distribución normal con las siguientes propiedades:
+
+<p align="center">
+  <img width="250" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/889c6b64-b8ad-4c85-99a1-5e1eabe07741/imagem_2023-10-07_161558848.png">
+</p>
+
+Lo mismo se puede hacer para el grupo de prueba. Por tanto, tendremos dos distribuciones normales para p_A y p_B. Y con distribuciones normales, nuestro trabajo de comparación será más sencillo.Obs: p_A y p_B están definidos en Python scrypt.
+
+
+
+
 
 
