@@ -144,6 +144,53 @@ Por tanto, podemos representar ambos grupos como una distribución normal con la
 
 Lo mismo se puede hacer para el grupo de prueba. Por tanto, tendremos dos distribuciones normales para p_A y p_B. Y con distribuciones normales, nuestro trabajo de comparación será más sencillo.Obs: p_A y p_B están definidos en Python scrypt.
 
+# Variância da Soma
+Otro punto importante para comprender lo que se hace en Python scrypt es la variación de la suma.
+Una propiedad básica de la varianza es que la varianza de la suma de dos variables aleatorias independientes es la suma de las varianzas. Algo obvio, pero hay que decir lo obvio: 
+- $Var(X+Y) = Var(X) + Var(Y)$
+
+- $Var(X+Y) = Var(X) + Var(Y)$
+
+Esto significa que las hipótesis nula y alternativa tendrán la misma varianza que será la suma de las varianzas para el grupo de control y de prueba:
+
+<p align="center">
+  <img width="700" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/3725a919-108c-4fd3-8814-b8b127733e7e.imagem_2023-10-07_180125501.png">
+</p>
+
+Entonces la desviación estándar se puede calcular como:
+
+<p align="center">
+  <img width="600" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/1c019dfb-58cc-434a-8ae0-d8e46c09f3e8.imagem_2023-10-07_182351012.png">
+</p>
+
+Si expresamos esta ecuación en relación con la desviación estándar de la distribución de Bernoulli, obtenemos:
+
+<p align="center">
+  <img width="250" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/252a072f-0d4b-4f45-a3ff-0a6cdb4b4df2.imagem_2023-10-07_183418952.png">
+</p>
+
+Y así obtenemos la aproximación de Satterthwaite para el error estándar agrupado. Cuando calculamos la probabilidad combinada y usamos este valor para determinar la desviación estándar de ambos grupos, llegamos a:
+
+![imagem_2023-10-07_185824302](https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/80249f02-9f01-491a-9388-972f184ca43e)
+
+Dónde: 
+
+<p align="center">
+  <img width="250" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/9d6a8774-6362-4bcd-bbd7-7838753ffa74.imagem_2023-10-07_190516970.png">
+</p>
+
+Las dos ecuaciones para el error estándar combinado producirán resultados muy similares. Esto nos proporcionará datos adecuados para crear las distribuciones relacionadas con la hipótesis nula y la hipótesis alternativa.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
