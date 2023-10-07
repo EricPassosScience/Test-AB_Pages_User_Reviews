@@ -6,6 +6,12 @@
 </p>
 
 **********************
+# Consideraciones iniciales:
+La guía paso a paso para resolver el problema se encuentra en el script Python.
+
+Sin embargo, en este README proporcionaré el contexto del problema, algunas de las técnicas utilizadas y los datos.
+
+***************************
 # ¿Qué son las Pruebas A/B?
 Los Test A/B, también conocidos como pruebas de división, son una estrategia altamente efectiva en el campo del Marketing Digital. Esta técnica de optimización se emplea con el objetivo de elevar gradualmente las tasas de conversión en un embudo de ventas, ya sea en relación con los contactos generados o las ventas concretadas. Además, se puede aplicar para mejorar otros aspectos en las fases iniciales del proceso, como la tasa de clics o la tasa de rebote.
 
@@ -111,13 +117,18 @@ Todo el paso a paso está dentro del script. Pero te dejo con algunas considerac
 - Trabajaremos con el Efecto Mínimo Detectable (Minimum Detectable Effect)
 - Recuerde, A será el grupo de control y B será el grupo de prueba
 
-Continuará...
+## Distribución de Bernoulli y el teorema del límite central
 
+***¿Cómo interpretar la diferencia en la probabilidad máxima? (Ver script en Python)***
 
+Es fundamental dirigir nuestra atención a la tasa de conversión para garantizar una comparación justa entre términos equivalentes. Para calcular esto con precisión, es imperativo estandarizar los datos y comparar las probabilidades de éxito (representadas por 'p') en cada grupo.
 
+Inicialmente debemos analizar la distribución de Bernoulli en el grupo control. La fórmula para esto es: ![imagem_2023-10-06_232903456](https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/9643946f-b209-4d3a-9509-8833fb2efa58)
 
+donde $P(X=k)$ es la probabilidad de obtener $k$ éxitos en un solo experimento de Bernoulli; $p$ es la probabilidad de éxito (por ejemplo, la tasa de conversión); $1-p$ es la probabilidad de fracaso; $k$ es 1 para éxito y 0 para fracaso.
 
-
+Según las propiedades de la distribución de Bernoulli, la media y la varianza son las siguientes: 
+$E(X) = p$ y $Var(X) = p(1 - p)$. 
 
 
 
