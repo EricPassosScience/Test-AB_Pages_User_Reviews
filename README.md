@@ -130,8 +130,11 @@ donde $P(X=k)$ es la probabilidad de obtener $k$ éxitos en un solo experimento 
 Según las propiedades de la distribución de Bernoulli, la media y la varianza son las siguientes: 
 $E(X) = p$ y $Var(X) = p(1 - p)$. 
 
+Según el teorema del límite central, al calcular varias medias muestrales, podemos aproximarnos a la media verdadera μ de la población, de la cual se obtuvieron los datos para el grupo de control. La distribución de las medias muestrales se distribuirá normalmente alrededor de la media verdadera, con una desviación estándar igual al error estándar de la media. La ecuación para esto viene dada como:
 
 
-
+<p align="center">
+  <img width="250" height="100" src="https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/254fca72-e950-4de1-a852-9c3e8a8c08da/imagem_2023-10-07_002250176.png">
+</p>
 
 
