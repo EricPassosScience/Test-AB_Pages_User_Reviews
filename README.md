@@ -181,15 +181,32 @@ Dónde:
 
 Las dos ecuaciones para el error estándar combinado producirán resultados muy similares. Esto nos proporcionará datos adecuados para crear las distribuciones relacionadas con la hipótesis nula y la hipótesis alternativa.
 
+# Influencia del tamaño de la muestra y Conclusiones:
+Del siguiente gráfico podemos sacar algunas conclusiones:
 
+Visualmente, el gráfico de las hipótesis nula y alternativa es muy similar a los otros gráficos que se encuentran en el script Python. Afortunadamente, las dos curvas tienen forma idéntica (hicimos algunas transformaciones a los datos), por lo que podemos simplemente comparar la distancia entre las medias de las dos distribuciones. ***Podemos ver que la curva de hipótesis alternativa sugiere que el grupo de prueba tiene una tasa de conversión más alta que el grupo de control.*** En otras palabras, la página que no tiene reseñas tiene una tasa de conversión de clientes más alta.
 
+Este gráfico también se puede utilizar para determinar directamente el poder estadístico. Es más fácil definir el poder estadístico y el nivel de significancia mostrando primero cómo se representan en el gráfico de hipótesis nula y alternativa. Podemos devolver una visualización del poder estadístico agregando el parámetro show_power = True.
 
+El área sombreada en verde representa la potencia estadística y el valor calculado de la potencia también se muestra en el gráfico. Las líneas discontinuas grises en el gráfico representan el intervalo de confianza (95%) para la hipótesis nula. El poder estadístico se calcula encontrando el área bajo la distribución de la hipótesis alternativa y fuera del intervalo de confianza de la hipótesis nula.
 
+Después de ejecutar nuestro experimento, obtenemos una tasa de conversión resultante para ambos grupos. Si calculamos la diferencia entre las tasas de conversión, terminamos con un resultado, la diferencia o el efecto de cambiar el diseño de la página web, sin mostrar las opiniones de los usuarios. Nuestra tarea es determinar de qué población proviene este resultado, la hipótesis nula o la hipótesis alternativa.
 
+El área bajo la curva de la hipótesis alternativa es igual a 1. Si el diseño alternativo (sin evaluaciones) es realmente mejor, la potencia es la probabilidad de que aceptemos la hipótesis alternativa y rechacemos la hipótesis nula y es igual al área sombreada en verde (verdadero positivo). El área opuesta bajo la curva alternativa es la probabilidad de no rechazar la hipótesis nula y rechazar la hipótesis alternativa (falso negativo). Esto se conoce como beta en las pruebas A/B o pruebas de hipótesis y se muestra a continuación.
 
+Si la hipótesis nula es verdadera y realmente no hay diferencia entre los grupos de control y de prueba, el nivel de significancia es la probabilidad de que rechacemos la hipótesis nula y aceptemos la hipótesis alternativa (falso positivo). Un falso positivo es cuando concluimos erróneamente que el nuevo diseño es mejor. Este valor es bajo porque queremos limitar esta probabilidad.
 
+A menudo, a un problema se le proporcionará un nivel de confianza deseado en lugar del nivel de significancia. Un nivel de confianza típico del 95 % para una prueba A/B corresponde a un nivel de significancia de 0,05.
 
+![imagem_2023-10-08_180455953](https://github.com/EricPassosScience/Test-AB_Pages_User_Reviews/assets/97414922/16cb0236-37f6-442c-8828-235b867171e7)
 
+Cabe señalar que lo que queremos es el mejor resultado lo más rápido posible con la menor cantidad de datos posible, por eso el poder estadístico es importante. A través del poder estadístico podemos determinar la cantidad mínima de datos necesarios para que la prueba tenga una potencia de al menos el 80%. Al calcular el tamaño mínimo de muestra que necesitamos antes del experimento, podemos determinar cuánto tiempo llevará obtener los resultados para que la empresa pueda tomar una decisión final.
+
+El secreto del Test A/B no está en realizar la prueba de hipótesis en sí, sino en poder obtener el poder estadístico necesario para confirmar si los cambios tuvieron efecto o no en la tasa de conversión. **Para nuestro ejemplo, con 1249 muestras podemos decir que sí, eliminar las reseñas de los usuarios de la página aumenta la tasa de conversión.**
+
+Todo esto se explicó en el archivo de Python, asegúrese de consultarlo.
+
+Fin
 
 
 
